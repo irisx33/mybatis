@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xyh.repository.PeopleRepository">
+    <insert id="save" parameterType="com.xyh.entity.People">
+        insert into people(name, deptId, password) values(#{name},#{deptId},#{password})
+    </insert>
+
+    <delete id="deleteById" parameterType="java.lang.Integer">
+        delete from people where id = #{id}
+    </delete>
+
+    <update id="update" parameterType="com.xyh.entity.People">
+        update people set name = #{name}, password = #{password} where id = #{id}
+    </update>
+
+    <select id="findById" parameterType="java.lang.Integer" resultType="com.xyh.entity.People">
+        select * from people where id = #{id}
+    </select>
+    <select id="findAll" resultType="com.xyh.entity.People">
+        select * from people;
+    </select>
+    <select id="findByIdAndName" resultType="com.xyh.entity.People">
+        select * from people where id = #{param1} and name = #{param2};
+    </select>
+    <select id="count" resultType="java.lang.Integer">
+        select count(*) from people
+    </select>
+    <select id="findNameById" parameterType="java.lang.Integer" resultType="java.lang.String">
+        select name from people where id = #{id}
+    </select>
+</mapper>

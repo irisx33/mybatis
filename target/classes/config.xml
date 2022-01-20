@@ -10,13 +10,14 @@
                 <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
                 <property name="url" value="jdbc:mysql://localhost:3306/test_db?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC"/>
                 <property name="username" value="root"/>
-                <property name="password" value="246810"/>
+                <property name="password" value="123456"/>
             </dataSource>
         </environment>
     </environments>
 
     <mappers>
         <mapper resource="com/xyh/mapper/PeopleMapper.xml"></mapper>
+        <mapper resource="com/xyh/repository/PeopleRepository.xml"></mapper>
     </mappers>
 
 </configuration>
