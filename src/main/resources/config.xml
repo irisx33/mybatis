@@ -16,8 +16,9 @@
     </environments>
 
     <mappers>
-        <mapper resource="com/xyh/mapper/PeopleMapper.xml"></mapper>
-        <mapper resource="com/xyh/repository/PeopleRepository.xml"></mapper>
+<!--        <mapper resource="com/xyh/mapper/PeopleMapper.xml"></mapper>-->
+<!--        <mapper resource="com/xyh/repository/PeopleRepository.xml"></mapper>-->
+        <mapper resource="com/xyh/repository/StudentRepository.xml"></mapper>
     </mappers>
 
 </configuration>
